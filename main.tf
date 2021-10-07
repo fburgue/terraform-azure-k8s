@@ -17,12 +17,12 @@ client_secret   = var.client_secret
 tenant_id       = var.tenant_id
 }
 
-# # Specifies we want to use Terraform Cloud to store our state file.
-# terraform {
-# backend "remote" {
-# organization = "CIRB"
-# workspaces {
-# name = "Terraform-FBU-Plan-01"
-# }
-# }
-# }
+# Specifies we want to use Terraform Cloud to store our state file. 
+terraform {
+backend "remote" {
+organization = "CIRB"
+workspaces {
+name = "terraform-azure-k8s"
+}
+}
+}
